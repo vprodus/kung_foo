@@ -87,6 +87,8 @@ defmodule KungFooWeb do
       import KungFooWeb.CoreComponents
       import KungFooWeb.Gettext
 
+      import LiveSvelte
+
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
 

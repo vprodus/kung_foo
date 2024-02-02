@@ -25,7 +25,8 @@ config :kung_foo, KungFooWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "bRnYmk0PeQDak3BNPxJYxJM307wDrm+nVnogiC99erd02/Mg9GW+BfsXt53sv/aS",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)],
+    # esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
